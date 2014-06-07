@@ -1,0 +1,644 @@
+@import "modules/colors";
+@import "modules/mixins";
+
+$font: Helvetica Neue, Helvetica, Segoe UI;
+$sidebarBG: #F9FBFC;
+
+html {
+	height: 100%;
+}
+
+body {
+	@include mp0;
+	background: #fff;
+	font-family: $font;
+	font-size: 13px;
+	height: 100%;
+	color: #292c34;
+}
+
+a {
+	color: $accent;
+	transition: color 0.2s;
+	text-decoration: none;
+
+	&:hover {
+		color: #999;
+	}
+}
+
+h1, h2 {
+	font-weight: 300;
+	@include mp0;
+}
+
+h3 {
+	@include mp0;
+	font-weight: 400;
+}
+
+body > header {
+	@include table;
+
+	background: #f6f6f6;
+	border-bottom: 1px solid #eee;
+
+	background: linear-gradient(to bottom, #fff, #f9f9f9);
+
+	padding: {
+		top: 12px;
+		bottom: 12px;
+	}
+
+	.left {
+		@include border-box;
+		@include cell(middle, 250px);
+
+		font-size: 18px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 3px;
+
+		svg {
+			display: inline-block;
+			height: 36px;
+			vertical-align: middle;
+			margin-top: -2px;
+			margin-right: -10px;
+		}
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	.actions {
+		@include cell(middle, auto);
+
+		ul {
+			display: inline-block;
+
+			@include ulreset;
+
+			li {
+				display: inline-block;
+				margin-right: -4px;
+
+				a {
+					border-right: 1px solid #f6f6f6;
+					padding: 7px;
+					padding-left: 10px;
+					padding-right: 10px;
+					background: #fff;
+					box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.07);
+					color: #292c34;
+
+					transition: background 0.2s;
+
+					&.textOnly {
+						padding-left: 12px;
+						padding-right: 12px;
+					}
+
+					svg {
+						width: 14px;
+						height: 14px;
+						vertical-align: top;
+						margin-top: -0.5px;
+
+						path {
+							fill: #292c34;
+							transition: fill 0.2s;
+						}
+					}
+
+					&:hover {
+						background: $sidebarBG;
+						color: $accent;
+
+						svg path {
+							fill: $accent;
+						}
+					}
+
+					&.active, &:active {
+						background: $accent;
+						color: #fff;
+						box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+						border-right: 1px solid darken($accent, 7%);
+
+						svg path {
+							fill: #fff;
+						}
+					}
+				}
+
+				&:first-child a {
+					border-top-left-radius: 4px;
+					border-bottom-left-radius: 4px;
+				}
+
+				&:last-child a {
+					border-right: 0;
+
+					border-top-right-radius: 4px;
+					border-bottom-right-radius: 4px;
+				}
+			}
+		}
+	}
+
+	.search {
+		@include border-box;
+		@include cell(middle, 250px);
+
+		padding-right: 20px;
+
+		input {
+			@include border-box;
+			display: block;
+			width: 100%;
+			padding-left: 28px;
+			border-radius: 20px;
+
+			background: {
+				image: url(../images/icons/search.svg);
+				size: 14px;
+				repeat: no-repeat;
+				position: 7px center;
+			}
+
+			&:hover, &:focus, &.active {
+				background-image: url(../images/icons/search_blue.svg);
+			}
+		}
+	}
+}
+
+#wrapper {
+	@include table;
+	height: 100%;
+}
+
+#sidebar {
+	@include cell(top, 250px);
+	border-right: 1px solid #f2f2f2;
+	background: $sidebarBG;
+
+	background: #fcfcfc;
+
+	nav {
+		margin-top: 20px;
+
+		ul {
+			@include ulreset;
+
+			li {
+
+				a {
+					@include border-box;
+
+					display: block;
+					font-weight: 300;
+					font-size: 14px;
+					color: #292c34;
+					width: 251px;
+					margin-right: -1px;
+
+					padding: {
+						top: 10px;
+						bottom: 10px;
+						left: 32px;
+						right: 32px;
+					}
+
+					svg {
+						height: 20px;
+						width: 20px;
+						display: inline-block;
+						vertical-align: top;
+						margin-top: -1px;
+						margin-right: 5px;
+
+						path {
+							fill: #292c34;
+							transition: fill 0.2s;
+						}
+					}
+
+					&[data-type="all"] svg {
+						height: 16px;
+						margin-top: 0px;
+						margin-right: 6px;
+					}
+
+					&:hover {
+						background: #fff;
+						color: $accent;
+
+						svg path {
+							fill: $accent;
+						}
+					}
+
+					&.active {
+						color: #fff;
+						background: $accent;
+
+						svg path {
+							fill: #fff;
+						}
+					}
+				}
+
+				&.header {
+					padding-left: 32px;
+					padding-right: 32px;
+					padding-bottom: 5px;
+					color: hsl(hue($sidebarBG), 9%, 76%);
+					font-weight: 500;
+
+					&:not(:first-child) {
+						margin-top: 32px;
+					}
+				}
+			}
+		}
+
+		&.floating {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 250px;
+		}
+	}
+
+	.upload {
+		@include border-box;
+		margin-left: 32px;
+		margin-top: 32px;
+		margin-bottom: 32px;
+		padding: 32px;
+		text-align: center;
+		border: 2px dashed #e0e0e0;
+		color: #999;
+		font-size: 14px;
+		cursor: pointer;
+		border-radius: 2px;
+
+		//&.floating {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 186px;
+		//}
+		
+		&:hover {
+			border-color: $accent;
+			color: $accent;
+			font-weight: 500;
+		}
+	}
+}
+
+#content {
+	@include cell(top, auto);
+	padding: 20px;
+
+	.nothing {
+		text-align: center;
+		padding-top: 256px;
+		padding-bottom: 256px;
+		color: #999;
+	}
+
+	.items.grid {
+		@include vendor-prefix(column-count, auto);
+		@include vendor-prefix(column-width, 250px);
+		@include vendor-prefix(column-gap, 20px);
+		@include vendor-prefix(column-break-inside, avoid);
+
+		.item {
+			width: 250px;
+			display: inline-block;
+			padding: 20px;
+			border: 1px solid #f6f6f6;
+			margin-bottom: 20px;
+			border-radius: 2px;
+			word-wrap: break-word;
+
+			.thumb {
+				@include border-box;
+				height: 150px;
+				background: #fff;
+				box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.05);
+				border-radius: 2px;
+				margin-bottom: 20px;
+				text-align: center;
+
+				background-repeat: no-repeat;
+				background-position: center;
+
+				svg {
+					height: 50%;
+					width: 50%;
+					margin-top: 38px;
+
+					path {
+						fill: desaturate(darken($sidebarBG, 14%), 20%);
+					}
+				}
+
+				audio {
+					width: 66%;
+					margin-top: 56px;
+				}
+
+				video {
+					@include border-box;
+					width: 100%;
+					height: 150px;
+				}
+			}
+
+			h3 {
+				font-size: 16px;
+				font-weight: 300;
+				margin-bottom: 5px;
+			}
+
+			span {
+				color: #999;
+			}
+
+			&:hover {
+				background: #fbfbfb;
+			}
+		}
+	}
+
+	.items.list {
+
+		.item {
+			@include table;
+			border-bottom: 1px solid #f6f6f6;
+			padding: 20px;
+			word-wrap: break-word;
+
+			.thumb {
+				@include cell(middle, 250px);
+				@include border-box;
+
+				height: 150px;
+				background: #fff;
+				box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.05);
+				border-radius: 2px;
+				margin-bottom: 20px;
+				text-align: center;
+
+				background-repeat: no-repeat;
+				background-position: center;
+
+				svg {
+					width: 64px;
+					height: 64px;
+					margin: auto;
+					display: block;
+
+					path {
+						fill: desaturate(darken($sidebarBG, 14%), 20%);
+					}
+				}
+
+				audio {
+					width: 66%;
+					margin: auto;
+				}
+
+				video {
+					@include border-box;
+					width: 100%;
+					height: 150px;
+				}
+			}
+
+			.meta {
+				@include cell(middle, auto);
+				padding: 20px;
+				padding-left: 32px;
+
+				h3 {
+					font-size: 21px;
+					font-weight: 200;
+				}
+			}
+
+			&:hover {
+				background: linear-gradient(to bottom, #fff, #fbfbfb);
+			}
+		}
+	}
+}
+
+#overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.90);
+
+	display: none;
+	opacity: 0;
+	transform: scale(0.9);
+
+	transition: transform 0.5s, opacity 0.5s;
+
+	h1 {
+		position: absolute;
+		width: 50%;
+		height: 25%;
+		top: 37.5%;
+		left: 25%;
+		text-align: center;
+	}
+
+	&.shown {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+#settings {
+	padding: {
+		left: 20px;
+		right: 20px;
+	}
+
+	fieldset {
+		@include mp0;
+		width: 50%;
+		margin: auto;
+		padding: 20px;
+		padding-left: 32px;
+		padding-right: 32px;
+		border: 1px solid #f6f6f6;
+		border-radius: 2px;
+
+		legend {
+			@include mp0;
+			margin-left: -16px;
+			padding: 7px;
+			padding-left: 12px;
+			padding-right: 12px;
+			font-size: 18px;
+			font-weight: 300;
+			color: #292c34;
+			border-radius: 2px;
+			background: #fff;
+			border: 1px solid #f6f6f6;
+		}
+
+		input {
+			padding: 7px;
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+}
+
+// specials
+.fLeft {
+	float: left;
+}
+
+.fRight {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+// Buttons, Inputs
+@import "partials/buttons";
+@import "partials/inputs";
+
+// Login
+#login {
+	width: 33%;
+	margin: auto;
+	margin-top: 128px;
+	margin-bottom: 128px;
+
+	header {
+		text-align: center;
+		font-size: 26px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 3px;
+
+		svg {
+			display: inline-block;
+			height: 64px;
+			width: 64px;
+			vertical-align: middle;
+			margin-top: -2px;
+			margin-right: -5px;
+		}
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	.error {
+		padding: 20px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+
+		background: $redB-BG;
+		color: #fff;
+		border-radius: 2px;
+
+		margin-top: 20px;
+	}
+
+	form {
+		margin-top: 32px;
+		padding: 20px;
+		background: #fff;
+		box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+
+		input {
+			@include border-box;
+
+			display: block;
+			width: 100%;
+			height: auto;
+
+			padding: 10px;
+			padding-left: 13px;
+			padding-right: 13px;
+			
+			margin-bottom: 5px;
+
+			&[type=submit] {
+				margin-top: 20px;
+			}
+
+			&.email, &.password {
+				background: {
+					image: url(../images/icons/user.svg);
+					size: 16px;
+					repeat: no-repeat;
+					position: 10px center;
+				}
+
+				padding-left: 32px;
+			}
+
+			&.password {
+				background-image: url(../images/icons/key.svg);
+
+				&:hover, &:focus {
+					background-image: url(../images/icons/key_blue.svg);
+				}
+			}
+
+			&.email {
+				background-image: url(../images/icons/user.svg);
+
+				&:hover, &:focus {
+					background-image: url(../images/icons/user_blue.svg);
+				}
+			}
+		}
+	}
+
+	footer {
+		text-align: center;
+		margin-top: 32px;
+		color: #999;
+
+		a {
+			color: #999;
+			text-decoration: underline;
+			font-size: 12px;
+
+			&:hover {
+				color: $accent;
+				text-decoration: none;
+			}
+		}
+
+		small {
+			font-size: 10px;
+		}
+	}
+}
+
+@media screen and (max-height: 650px) {
+	#sidebar .upload {
+		position: relative;
+	}
+}

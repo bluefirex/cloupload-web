@@ -1,0 +1,55 @@
+@mixin vendor-prefix($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
+@mixin platform-light-span {
+	span {
+		color: $platform-span-light;
+	}
+}
+
+@mixin border-box {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin mp0 {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin cell($dir, $width) {
+	display: table-cell;
+	width: $width;
+	vertical-align: $dir;
+}
+
+@mixin ulreset {
+	list-style-type: none;
+	@include mp0;
+}
+
+@mixin card {
+	background: #fff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+}
+
+@mixin clearfix {
+	&:after {
+		clear: both;
+		display: block;
+		content: '';
+	}
+}
+
+@mixin table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	@include border-box;
+}

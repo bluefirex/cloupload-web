@@ -1,0 +1,251 @@
+input[type=submit], input[type=button], button, a.button, a.buttonBW, .NFI-button {
+	border: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 2px;
+	font-family: $standard-font;
+	font-size: 13px;
+	cursor: pointer;
+	@include vendor-prefix(transition, all 0.1s);
+	outline: 0;
+
+	/* Standard Design blueB */
+	background: $accent;
+	color: #fff;
+
+	&.disabled {
+		cursor: default;
+	}
+}
+
+	input[type=submit], input[type=button], button {
+		height: 30px;
+		margin-right: -2px;
+	}
+
+	input[type=submit]:hover, input[type=button]:hover, button:hover, a.button:hover, a.buttonBW:hover, .NFI-button:hover {
+		background: #1596D6;
+	}
+
+	a.button, a.buttonBW {
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 11px;
+		padding-right: 11px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	a.buttonBW {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border: 1px solid #272727;
+	}
+
+	input[type=submit]:active, input[type=button]:active, button:active a.button:active, a.buttonBW:active, .NFI-button:active {
+		box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.3);
+	}	
+
+/* BLACK */
+
+a.blackB, input.blackB {
+	background: $blackB-BG;
+
+	&:hover {
+		background: #373737;
+	}
+}
+
+/* DARK */
+
+a.darkB, input.darkB, .NFI-button {
+	background: $darkB-BG;
+
+	&:hover {
+		background: #4C505E;
+	}
+}
+
+/* LIGHT */
+	
+a.lightB, input.lightB {
+	background: #fff;
+	color: #000;
+
+	&:hover {
+		background: #eee;
+	}
+}
+
+/* ORANGE */
+
+a.orangeB, input.orangeB {
+	background: $orangeB-BG;
+
+	&:hover {
+		background: #FF6729;
+	}
+}
+
+/* RED */
+	
+a.redB, input.redB {
+	background: $redB-BG;
+
+	&:hover {
+		background: #D61F15;
+	}
+}
+
+/* GREEN */
+	
+a.greenB, input.greenB {
+	background: $greenB-BG;
+
+	&:hover {
+		background: #7FD615;
+	}
+}
+
+/* PURPLE */
+
+a.purpleB, input.purpleB {
+	background: $purpleB-BG;
+	
+	&:hover {
+		background: #B054D6;
+	}
+}
+
+/* GREY */
+
+a.greyB, input.greyB {
+	background: $greyB-BG;
+	color: #272727;
+
+	&:hover {
+		background: #d0d0d0;
+	}
+}
+
+/* P!nk */
+
+a.pinkB, input.pinkB {
+	background: #AB1191;
+
+	&:hover {
+		background: #D615B6;
+	}
+}
+
+/** BW Buttons */
+a.redBW, input.redBW {
+	color: $redB-BG;
+	background: white;
+	border: 1px solid $redB-BG;
+
+	&:hover {
+		background: $redB-BG;
+		color: #fff;
+	}
+}
+
+a.greyBW, input.greyBW {
+	color: #999;
+	background: transparent;
+	border: 1px solid #c0c0c0;
+
+	&:hover {
+		background: #c0c0c0;
+		color: #fff;
+	}
+
+	&:active {
+		box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+	}
+}
+
+a.orangeBW, input.orangeBW {
+	color: orange;
+	background: transparent;
+	border: 1px solid orange;
+
+	&:hover {
+		background: orange;
+		color: #fff;
+	}
+}
+
+a.blueBW, input.blueBW {
+	color: $accent;
+	background: transparent;
+	border: 1px solid $accent;
+
+	&:hover {
+		background: $accent;
+		color: #fff;
+	}
+}
+
+/* Action buttons */
+
+.buttonA {
+	margin-left: 20px;
+	color: #999;
+
+	svg {
+		height: 18px;
+		width: 18px;
+		padding-right: 5px;
+		margin-bottom: -1px;
+		vertical-align: top;
+
+		#Shape {
+			fill: #999 !important;
+		}
+	}
+
+	&:hover {
+		color: $accent !important;
+
+		svg {
+			fill: $accent !important;
+		}
+	}
+
+	&.redA:hover {
+		color: $redB-BG !important;
+
+		svg #Shape {
+			fill: $redB-BG !important;
+		}
+	}
+
+	&.orangeA:hover {
+		color: orange !important;
+
+		svg #Shape {
+			fill: orange !important;
+		}
+	}
+
+	&.pinkA:hover {
+		color: #AB1191 !important;
+
+		svg #Shape {
+			fill: #AB1191 !important;
+		}
+	}
+
+	&.greenA:hover {
+		color: $greenB-BG !important;
+
+		svg #Shape {
+			fill: $greenB-BG !important;
+		}
+	}
+}

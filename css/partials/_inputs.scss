@@ -1,0 +1,40 @@
+input[type=text], input[type=password], input[type=email], input[type=number],
+input.NFI-filename,
+textarea {
+	font-size: 12px;
+	padding: 5px;
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+	background: #fff;
+	border: 1px solid #eee;
+	font-family: $font;
+	border-radius: 2px;
+	outline: 0;
+	@include vendor-prefix(transition, border 0.1s);
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05);
+
+	&:hover, &:focus, &.active {
+		border: 1px solid $accent;
+	}
+}
+
+textarea {
+	resize: vertical;
+}
+
+	.NFI-wrapper {
+		margin-top: 2px;
+		vertical-align: middle;
+	}
+
+	input.NFI-filename {
+		height: 24px;
+		line-height: 24px;
+		margin-left: 5px !important;
+	}
+
+	input.w50 {
+		width: 49%;
+		@include vendor-prefix(box-sizing, border-box);
+		margin-right: 2px;
+	}

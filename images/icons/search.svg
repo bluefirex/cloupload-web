@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Slice 1</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="_x32__action_search" sketch:type="MSLayerGroup" fill="#bbb">
+            <path d="M63.771,54.748 L51.607,42.58 C50.537,41.512 48.599,41.613 46.657,42.625 L41.349,37.32 C48.263,28.287 47.611,15.318 39.346,7.052 C30.347,-1.944 15.759,-1.944 6.759,7.052 C-2.235,16.052 -2.235,30.64 6.759,39.639 C15.027,47.904 27.995,48.556 37.029,41.64 L42.336,46.944 C41.324,48.89 41.221,50.826 42.289,51.896 L54.455,64.064 C55.992,65.599 59.329,64.755 61.896,62.181 C64.467,59.614 65.311,56.283 63.771,54.748 L63.771,54.748 Z M10.188,36.215 C3.084,29.106 3.084,17.582 10.188,10.479 C17.297,3.37 28.809,3.375 35.922,10.479 C43.026,17.583 43.026,29.102 35.922,36.215 C28.809,43.318 17.291,43.318 10.188,36.215 L10.188,36.215 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

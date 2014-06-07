@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path id="video-3-icon" d="M423.253,67.103v38.731h-45.054V67.103h-40.554v38.731H177.961V67.103h-40.553v38.731H92.354V67.103H50
+	v377.795h42.354v-38.668h45.055v38.668h40.553v-38.668h159.685v38.668h40.554v-38.668h45.054v38.668H462V67.103H423.253z
+	 M137.408,377.268H92.354v-38.747h45.055V377.268z M137.408,309.361H92.354v-38.747h45.055V309.361z M137.408,242.101H92.354
+	v-38.748h45.055V242.101z M137.408,174.516H92.354v-38.747h45.055V174.516z M209.767,325.932V186.069l114.06,69.934L209.767,325.932
+	z M423.253,377.268h-45.054v-38.747h45.054V377.268z M423.253,309.361h-45.054v-38.747h45.054V309.361z M423.253,242.101h-45.054
+	v-38.748h45.054V242.101z M423.253,174.516h-45.054v-38.747h45.054V174.516z"/>
+</svg>
