@@ -1,5 +1,7 @@
 # CloudApp Client for the browser
 
+![Screenshot](http://f.cl.ly/items/2P3m2E1A1L333e0r2Z06/Image%202014-06-07%20at%2010.49.02%20nachm..png)
+
 ## Introduction
 
 Cloupload Web is a simple CloudApp client for the browser. It is written in PHP and uses an SQLite-database (MySQL optional).
