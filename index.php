@@ -258,7 +258,7 @@
 					</ul>
 				</nav>
 
-				<div class="upload">
+				<div class="upload" onClick="javascript:alert('Coming soon!');">
 					Click to<br />upload a file
 				</div>
 			</div>
