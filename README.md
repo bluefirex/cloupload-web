@@ -32,7 +32,7 @@ This is a single user client. You should therefore put a password on the folder 
 
 ## Switching to MySQL
 
-Cloupload Web spportes MySQL in case you don't want to use SQLite. Simple follow these steps to switch to MySQL:
+Cloupload Web supports MySQL in case you don't want to use SQLite. Simple follow these steps to switch to MySQL:
 
 1. Open `base.php`
 2. Change the line saying `$db = Database::SQLite(PATH . '_db.sqlite3');` to `$db = Database::MySQL('host', 'username', 'password', 'database');`. Replace values as needed.
